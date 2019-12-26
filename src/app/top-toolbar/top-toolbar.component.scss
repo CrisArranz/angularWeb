@@ -1,3 +1,6 @@
+.header-content{
+    height: 100%;
+}
 .header-prncl{
     background-color: white;
     background-repeat: no-repeat;
@@ -9,9 +12,8 @@
     min-height: 0px;
     color: white;
     text-align: center;
-    padding-top: 350px;
-    padding-bottom: 350px;
-    max-height: 100%;
+    padding-top: 415px;
+    padding-bottom: 415px;
     font-size: 30px;
 }
 
@@ -23,12 +25,12 @@ h4{
     margin: 0 auto;
     padding: 0;
     position: relative;
-    width: 1056px;
 }
 
 .container-name-h1{
     display: inline-block;
     position: relative;
+    margin: 20px 0px 0px 0px;
 }
 
 .container-name-h1::before, .container-name-h1::after{
@@ -51,5 +53,8 @@ h4{
 }
 
 .container-name-h1-p{
+    margin: 0px;
+}
+.container-prename-h4{
     margin: 0px;
 }
