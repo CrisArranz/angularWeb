@@ -1,6 +1,7 @@
 .footer-prj{
     height: auto;
     color: white;
+    margin-top: 5px;
 }
 .img-social{
     width: 45px;
@@ -10,4 +11,12 @@
 }
 #footer-prj-info-social{
     float: right;
+    margin-top: 5px;
+}
+#copyright{
+    margin-top: 15px;
+    float: left;
+    font-size: 80%;
+    font-weight: bold;
+    width: 50%;
 }
