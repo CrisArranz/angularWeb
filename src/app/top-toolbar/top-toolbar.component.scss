@@ -15,9 +15,41 @@
     font-size: 30px;
 }
 
+h4{
+    font-weight: normal;
+}
+
 .container{
     margin: 0 auto;
     padding: 0;
     position: relative;
     width: 1056px;
+}
+
+.container-name-h1{
+    display: inline-block;
+    position: relative;
+}
+
+.container-name-h1::before, .container-name-h1::after{
+    content: " ";
+    display: inline-block;
+    height: 2px;
+    margin: 0 10px;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    zoom: 1;
+    background-color: white;
+}
+
+.container-name-h1::before{
+    left: 100%;
+}
+.container-name-h1::after{
+    right: 100%;
+}
+
+.container-name-h1-p{
+    margin: 0px;
 }
