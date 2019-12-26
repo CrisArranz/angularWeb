@@ -3,14 +3,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent;
+    background-attachment: fixed;
     background-position: 50% 50%;
     background-image: url('../../assets/1519910473_492871_1519910821_noticia_normal.jpg');
     min-height: 0px;
     color: white;
     text-align: center;
-    padding-top: 385px;
-    padding-bottom: 385px;
-    font-size: 40px;
+    padding-top: 350px;
+    padding-bottom: 350px;
+    max-height: 100%;
+    font-size: 30px;
 }
 
 .container{
