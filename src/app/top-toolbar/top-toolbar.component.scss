@@ -1,6 +1,12 @@
 nav ul {
 	list-style: none;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-image: url('../../assets/1519910473_492871_1519910821_noticia_normal.jpg');
 }
  
 nav ul li {
@@ -12,11 +18,14 @@ nav ul li a {
 	display: block;
 	padding:10px;
 	color:#fff;
-	text-decoration: none;
+    text-decoration: none;
+    width: 80px;
+    text-align: center;
 }
  
 nav ul li a:hover {
-	color:#2980b9;
+    color:#2980b9;
+    font-weight: bold;
 }
 
 h4{
@@ -36,6 +45,8 @@ h4{
 
 .header-nav{
     position: fixed;
+    width: 100%;
+    margin-top: 25px;
 }
 
 .header-nav-list-link{
