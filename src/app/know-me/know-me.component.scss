@@ -1,5 +1,5 @@
 .body-knowme{
-    height: 800px;
+    height: 950px;
     padding-top: 120px;
     background-color: #D6D9DE;
 }
@@ -22,8 +22,33 @@ h1 {
     margin-left: 50px; 
 }
 
+.knowme-list-div{
+    margin-top: 0px;
+}
+
 .knowme-li:hover, .knowme-link:hover{
     color:white;
     background-color: #2980b9;
     cursor: pointer;
+}
+
+@media (max-width: 950px){
+    .body-knowme{
+        padding-top: 180px;
+    }
+    .knowme-li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+    }
+    .knowme-list{
+        width: fit-content;
+        margin: 0px auto;
+        font-size: 13px;
+    }
+
+    .knowme-list-div{
+        margin-top: 10px;
+    }
 }
