@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgAnimateScrollService } from 'ng-animate-scroll';
 
 @Component({
   selector: 'app-top-toolbar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private animateScrollService: NgAnimateScrollService) { }
 
   ngOnInit() {
+  }
+
+  navigateTo(element: string, duration?: number) {
+    this.animateScrollService.scrollToElement(element, duration)
   }
 
 }

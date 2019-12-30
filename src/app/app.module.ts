@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
 import { FooterToolbarComponent } from './footer-toolbar/footer-toolbar.component';
 import { KnowMeComponent } from './know-me/know-me.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopToolbarComponent,
     FooterToolbarComponent,
-    KnowMeComponent
+    KnowMeComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
