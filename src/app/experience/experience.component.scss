@@ -8,9 +8,66 @@ h1 {
     font-size: 50px;
 }
 
+.experience-ul{
+    border: 1px solid black;
+}
+
+.experience-li{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.experience-link{
+    text-decoration: none;
+    color: black;
+}
+
+.experience-list{
+    width: fit-content;
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px; 
+}
+
+.experience-list-div{
+    margin-top: 0px;
+}
+
+.experience-li:hover, .experience-link:hover{
+    color:white;
+    background-color: #2980b9;
+    cursor: pointer;
+}
+
+.experience-topics{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: gainsboro;
+}
+
 
 @media (max-width: 950px){
     .body-experience{
         padding-top: 180px;
+    }
+
+    .experience-li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+    }
+    .experience-list{
+        width: fit-content;
+        margin: 0px auto;
+        float: none;
+        font-size: 13px;
+    }
+
+    .experience-list-div{
+        margin-top: 10px;
     }
 }
