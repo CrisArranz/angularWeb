@@ -3,12 +3,15 @@
     <nav class="knowme-list">
         <div class="knowme-list-div">
             <ul class="knowme-ul">
-                <li class="knowme-li" id="estudios"><a class="knowme-link">Estudios</a></li>
-                <li class="knowme-li" id="aficiones"><a class="knowme-link">Aficiones</a></li>
-                <li class="knowme-li" id="gustos"><a class="knowme-link">Gustos</a></li>
-                <li class="knowme-li" id="intereses"><a class="knowme-link">Intereses</a></li>
-                <li class="knowme-li" id="inquietudes"><a class="knowme-link">Inquietudes</a></li>
+                <li class="knowme-li" id="estudios" routerLinkActive="active"><span>Estudios</span><a class="knowme-link" routerLink="/knowledge"></a></li>
+                <li class="knowme-li" id="aficiones" routerLinkActive="active"><span>Aficiones</span><a class="knowme-link" routerLink="/hobbies"></a></li>
+                <li class="knowme-li" id="gustos" routerLinkActive="active"><span>Gustos</span><a class="knowme-link" routerLink="/likes"></a></li>
+                <li class="knowme-li" id="intereses" routerLinkActive="active"><span>Intereses</span><a class="knowme-link" routerLink="/interests"></a></li>
+                <li class="knowme-li" id="inquietudes" routerLinkActive="active"><span>Inquietudes</span><a class="knowme-link" routerLink="/concerns"></a></li>
             </ul>
         </div>
     </nav>
+    <div class="knowme-topics">
+        <router-outlet></router-outlet>
+    </div>
 </div>

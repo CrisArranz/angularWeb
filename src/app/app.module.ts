@@ -8,6 +8,11 @@ import { FooterToolbarComponent } from './footer-toolbar/footer-toolbar.componen
 import { KnowMeComponent } from './know-me/know-me.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { KnowledgeComponent } from './know-me/knowledge/knowledge.component';
+import { HobbiesComponent } from './know-me/hobbies/hobbies.component';
+import { LikesComponent } from './know-me/likes/likes.component';
+import { InterestsComponent } from './know-me/interests/interests.component';
+import { ConcernsComponent } from './know-me/concerns/concerns.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { ContactComponent } from './contact/contact.component';
     FooterToolbarComponent,
     KnowMeComponent,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    KnowledgeComponent,
+    HobbiesComponent,
+    LikesComponent,
+    InterestsComponent,
+    ConcernsComponent
   ],
   imports: [
     BrowserModule,
