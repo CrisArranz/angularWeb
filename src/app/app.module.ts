@@ -7,6 +7,7 @@ import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
 import { FooterToolbarComponent } from './footer-toolbar/footer-toolbar.component';
 import { KnowMeComponent } from './know-me/know-me.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ExperienceComponent } from './experience/experience.component';
     TopToolbarComponent,
     FooterToolbarComponent,
     KnowMeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

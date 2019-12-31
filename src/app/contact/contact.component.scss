@@ -1,0 +1,55 @@
+.body-contact{
+    height: 770px; 
+    padding-top: 120px;
+    background-color: #D6D9DE;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.contact-info-personal{
+    margin-top: 130px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#contact-name{
+    margin-bottom: 15px;
+}
+
+.contact-info-social{
+    opacity: 50%;
+}
+
+.img-social{
+    width: 45px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.social{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 950px){
+    .body-contact{
+        height: 420px;
+        padding-top: 160px;
+    }
+    .contact-info-personal{
+        margin-top: 70px;
+    }
+}
+@media (min-width: 951px) and (max-width: 1024px){
+    .body-contact{
+        height: 590px;
+        padding-top: 120px;
+    }
+    .contact-info-personal{
+        margin-top: 110px;
+    }
+}
