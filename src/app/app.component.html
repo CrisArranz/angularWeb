@@ -1,5 +1,5 @@
 <app-top-toolbar></app-top-toolbar>
-<div id="navigateto">
-    <router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)" id="navigateto">
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-footer-toolbar></app-footer-toolbar>
