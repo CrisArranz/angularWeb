@@ -8,19 +8,16 @@ h1 {
     font-size: 50px;
 }
 
-.experience-ul{
-    border: 1px solid black;
-}
-
-.experience-li{
-    display: block;
-    text-align: center;
-    padding: 15px;
+.experience-ul, .experience-li{
+    list-style: none;
     border: 1px solid black;
 }
 
 .experience-link{
+    display: block;
     text-decoration: none;
+    text-align: center;
+    padding: 15px;
     color: black;
 }
 

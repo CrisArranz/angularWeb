@@ -9,13 +9,15 @@ import { KnowledgeComponent } from '../know-me/knowledge/knowledge.component';
 import { LikesComponent } from '../know-me/likes/likes.component';
 
 const appRoutes: Routes = [
-  { path: 'knowme', component: KnowMeComponent, children: [
-    { path: 'concerns', component: ConcernsComponent},
-    { path: 'hobbies', component: HobbiesComponent },
-    { path: 'interests', component: InterestsComponent },
-    { path: 'knowledge', component: KnowledgeComponent },
-    { path: 'likes', component: LikesComponent }
-  ]}
+  { path: '', component: KnowMeComponent, children: [
+      { path: 'knowme/concerns', component: ConcernsComponent},
+      { path: 'knowme/hobbies', component: HobbiesComponent },
+      { path: 'knowme/interests', component: InterestsComponent },
+      { path: 'knowme/knowledge', component: KnowledgeComponent },
+      { path: 'knowme/likes', component: LikesComponent }
+    ]
+  }
+  
 ];
 
 @NgModule({
