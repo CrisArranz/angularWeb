@@ -10,6 +10,9 @@ import { LikesComponent } from '../know-me/likes/likes.component';
 
 import { ExperienceComponent } from '../experience/experience.component';
 
+
+import { ContactComponent } from '../contact/contact.component';
+
 const appRoutes: Routes = [
   { path: 'knowme', component: KnowMeComponent, pathMatch: 'prefix', children: [
     { path: 'concerns', component: ConcernsComponent},
@@ -20,6 +23,7 @@ const appRoutes: Routes = [
     { path: '', component: KnowledgeComponent }
   ]},
   { path: 'experience', component: ExperienceComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
