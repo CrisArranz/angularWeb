@@ -1,19 +1,24 @@
-.footer-prj{
-    height: 60px;
-    color: black;
-    opacity: 50%;
+.footer-prj {
+  height: 60px;
+  color: black;
+  opacity: 50%;
+  border-top: solid 1px grey;
 }
 
-#copyright{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 80%;
-    font-weight: bold;
-    width: 100%;
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 80%;
+  font-weight: bold;
+  width: 100%;
 }
 
-@media (max-width: 950px){
-    #copyright{
-        font-size: 70%;
-    }
+.copyrightName::after {
+  content: " | ";
+}
+
+@media (max-width: 950px) {
+  .copyright {
+    font-size: 70%;
+  }
 }

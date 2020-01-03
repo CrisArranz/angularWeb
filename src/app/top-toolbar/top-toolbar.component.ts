@@ -15,7 +15,7 @@ export class TopToolbarComponent implements OnInit {
   }
 
   navigateTo(element: string, duration?: number) {
-    this.animateScrollService.scrollToElement(element, duration)
+    this.animateScrollService.scrollToElement(element, duration);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-know-me',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KnowMeComponent implements OnInit {
 
-  constructor() { }
+  currentLink = false;
+  currentHref: string;
+  sourceHref = '/knowme/';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  mark() {
+    this.currentHref = this.router.url.split(this.sourceHref)[1];
   }
 
 }

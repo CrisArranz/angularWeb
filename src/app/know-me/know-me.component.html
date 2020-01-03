@@ -1,17 +1,27 @@
 <div class="body-knowme" id="knowme">
-    <h1> CONÓCEME </h1>
-    <nav class="knowme-list">
-        <div class="knowme-list-div">
-            <ul class="knowme-ul">
-                <li class="knowme-li" id="estudios"><a class="knowme-link" routerLink="./knowledge">Estudios</a></li>
-                <li class="knowme-li" id="aficiones"><a class="knowme-link" routerLink="./hobbies">Aficiones</a></li>
-                <li class="knowme-li" id="gustos"><a class="knowme-link" routerLink="./likes">Gustos</a></li>
-                <li class="knowme-li" id="intereses"><a class="knowme-link" routerLink="./interests">Intereses</a></li>
-                <li class="knowme-li" id="inquietudes"><a class="knowme-link" routerLink="./concerns">Inquietudes</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="knowme-topics">
-        <router-outlet></router-outlet>
+  <h1>CONÓCEME</h1>
+  <nav class="knowme-list">
+    <div class="knowme-list-div">
+      <ul class="knowme-ul">
+        <li class="knowme-li" id="estudios" (click)="mark()">
+          <a class="knowme-link" routerLink="./knowledge" [ngClass]="{'mainItem': currentHref === 'knowledge' }">Estudios</a>
+        </li>
+        <li class="knowme-li" id="aficiones" (click)="mark()">
+          <a class="knowme-link" routerLink="./hobbies" [ngClass]="{'mainItem': currentHref === 'hobbies' }">Aficiones</a>
+        </li>
+        <li class="knowme-li" id="gustos" (click)="mark()">
+          <a class="knowme-link" routerLink="./likes" [ngClass]="{'mainItem': currentHref === 'likes' }">Gustos</a>
+        </li>
+        <li class="knowme-li" id="intereses" (click)="mark()">
+          <a class="knowme-link" routerLink="./interests" [ngClass]="{'mainItem': currentHref === 'interests' }">Intereses</a>
+        </li>
+        <li class="knowme-li" id="inquietudes" (click)="mark()">
+          <a class="knowme-link" routerLink="./concerns" [ngClass]="{'mainItem': currentHref === 'concerns' }">Inquietudes</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  <div class="knowme-topics">
+    <router-outlet></router-outlet>
+  </div>
 </div>
