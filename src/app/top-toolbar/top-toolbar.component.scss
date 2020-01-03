@@ -50,6 +50,7 @@ h4{
 .header-nav{
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .header-nav-list-link{
@@ -123,6 +124,15 @@ h4{
         font-size: 150%;
     }
     .header-prncl{
-        padding-top: 250px;
+        padding-top: 460px;
+        padding-bottom: 460px;
+    }
+    .header-nav{
+        font-size: 13px;
+    }
+}
+@media (max-width: 767px){
+    .header-prncl{
+        padding-top: 270px;
     }
 }

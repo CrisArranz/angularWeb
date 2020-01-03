@@ -1,12 +1,12 @@
 .body-knowme{
     height: 770px;
-    padding-top: 120px;
-    background-color: #D6D9DE;
+    padding-top: 60px;
 }
 
 h1 {
     text-align: center;
     font-size: 50px;
+    margin-bottom: 10px;
 }
 
 
@@ -27,7 +27,7 @@ h1 {
     width: fit-content;
     float: left;
     margin-top: 100px;
-    margin-left: 50px; 
+    margin-left: 100px; 
 }
 
 .knowme-list-div{
@@ -41,30 +41,60 @@ h1 {
 }
 
 .knowme-topics{
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 100px;
-    background-color: gainsboro;
 }
 
 @media (max-width: 950px){
+    h1 {
+        font-size: 35px; 
+    }
     .body-knowme{
-        padding-top: 180px;
+        padding-top: 120px;
+        height: 770px;
     }
     .knowme-li{
         display: inline-block;
         text-align: center;
-        padding: 5px;
+        padding: 0px;
         border: 1px solid black;
+    }
+    .knowme-link{
+        padding: 10px;
+
     }
     .knowme-list{
         width: fit-content;
         margin: 0px auto;
         float: none;
-        font-size: 13px;
+        font-size: 10px;
     }
 
     .knowme-list-div{
         margin-top: 10px;
+    }
+}
+@media (min-height: 1366px) and (max-height: 1366px){
+    .body-knowme{
+        height: 1200px;
+    }
+    .knowme-list{
+        margin-left: 60px; 
+    }
+}
+
+@media (min-height: 1024px) and (max-height: 1024px){
+    .body-knowme{
+        height: 825px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px){
+    .body-knowme{
+        padding-top: 120px;
+    }
+    .knowme-list{
+        margin-left: 60px; 
     }
 }

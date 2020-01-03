@@ -13,7 +13,7 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { ContactComponent } from '../contact/contact.component';
 
 const appRoutes: Routes = [
-  { path: 'knowme', component: KnowMeComponent ,pathMatch: 'prefix', children: [
+  { path: 'knowme', component: KnowMeComponent, pathMatch: 'prefix', children: [
     { path: 'concerns', component: ConcernsComponent},
     { path: 'hobbies', component: HobbiesComponent },
     { path: 'interests', component: InterestsComponent },
