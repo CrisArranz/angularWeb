@@ -123,16 +123,17 @@ h4{
         margin: 0px;
         font-size: 150%;
     }
-    .header-prncl{
-        padding-top: 460px;
-        padding-bottom: 460px;
-    }
     .header-nav{
         font-size: 13px;
     }
 }
-@media (max-width: 767px){
+@media (max-height: 850px) and (max-width: 420px){
     .header-prncl{
         padding-top: 270px;
+    }
+}
+@media (max-width: 850px) and (max-height: 420px){
+    .header-prncl{
+        padding-top: 150px;
     }
 }
