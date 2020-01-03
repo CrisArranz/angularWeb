@@ -10,7 +10,6 @@ import { LikesComponent } from '../know-me/likes/likes.component';
 
 import { ExperienceComponent } from '../experience/experience.component';
 
-
 import { ContactComponent } from '../contact/contact.component';
 
 const appRoutes: Routes = [
