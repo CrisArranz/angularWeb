@@ -1,29 +1,29 @@
-.body-contact {
+.contactBody {
   height: 770px;
   padding-top: 60px;
 }
 
-h1 {
+.contactTitle {
   text-align: center;
   font-size: 50px;
   margin-bottom: 10px;
 }
 
-.contact-info-personal {
+.contactInfoPersonal {
   margin-top: 130px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.contact-name {
+.contactName {
   margin-bottom: 15px;
 }
 
-.contact-info-social {
+.contactInfoSocial {
   opacity: 50%;
 }
 
-.img-social {
+.imgSocial {
   width: 45px;
   margin-right: 1px;
   margin-left: 1px;
@@ -35,37 +35,37 @@ h1 {
 }
 
 @media (max-width: 950px) {
-  h1 {
+  .contactTitle {
     font-size: 35px;
   }
-  .img-social {
+  .imgSocial {
     width: 40px;
   }
-  .body-contact {
+  .contactBody {
     height: 770px;
     padding-top: 120px;
   }
-  .contact-info-personal {
+  .contactInfoPersonal {
     margin-top: 70px;
     font-size: 10px;
   }
 }
 @media (min-width: 951px) and (max-width: 1024px) {
-  .body-contact {
+  .contactBody {
     padding-top: 120px;
   }
-  .contact-info-personal {
+  .contactInfoPersonal {
     margin-top: 110px;
   }
 }
 @media (min-height: 1024px) and (max-height: 1024px) {
-  .body-contact {
+  .contactBody {
     height: 825px;
   }
 }
 
 @media (min-height: 1366px) and (max-height: 1366px) {
-  .body-contact {
+  .contactBody {
     height: 1200px;
   }
 }

@@ -1,4 +1,4 @@
-.footer-prj {
+.footerPrj {
   height: 60px;
   color: black;
   opacity: 50%;
@@ -15,6 +15,15 @@
 
 .copyrightName::after {
   content: " | ";
+}
+
+.copyrightImage {
+  content: url('../../assets/copyright.svg');
+  width: 10px;
+  height: 10px;
+}
+.copyrightImage::after, .copyrightImage::before {
+  content: " ";
 }
 
 @media (max-width: 950px) {

@@ -36,7 +36,7 @@ h4{
     font-weight: normal;
 }
 
-.header-content{
+.headerContent{
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,17 +47,17 @@ h4{
     color: white;
 }
 
-.header-nav{
+.headerList{
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
-.header-nav-list-link{
+.headerLink{
     text-decoration: none;
     color: white;
 }
-.header-prncl{
+.headerPrncl{
     text-align: center;
     padding-top: 405px;
     padding-bottom: 405px;
@@ -69,13 +69,13 @@ h4{
     position: relative;
 }
 
-.container-name-h1{
+.nameBox{
     display: inline-block;
     position: relative;
     margin: 20px 0px 0px 0px;
 }
 
-.container-name-h1::before, .container-name-h1::after{
+.nameBox::before, .nameBox::after{
     content: " ";
     display: inline-block;
     height: 2px;
@@ -87,24 +87,24 @@ h4{
     background-color: white;
 }
 
-.container-name-h1::before{
+.nameBox::before{
     left: 100%;
 }
-.container-name-h1::after{
+.nameBox::after{
     right: 100%;
 }
 
-.container-name-h1-p{
+.nameTitle{
     margin: 0px;
     font-size: 70px;
 }
-.container-prename-h4{
+.prenameTitle{
     margin: 0px;
     font-size: 35px;
 }
 
 @media (max-width: 950px){
-    .container-name-h1::before, .container-name-h1::after{
+    .nameBox::before, .nameBox::after{
         content: "";
         display: none;
         height: 0px;
@@ -115,25 +115,25 @@ h4{
         zoom: 0;
         background-color: white;
     }
-    .container-name-h1-p{
+    .nameTitle{
         margin: 0px;
         font-size: 150%;
     }
-    .container-prename-h4{
+    .prenameTitle{
         margin: 0px;
         font-size: 150%;
     }
-    .header-nav{
+    .headerList{
         font-size: 13px;
     }
 }
 @media (max-height: 850px) and (max-width: 420px){
-    .header-prncl{
+    .headerPrncl{
         padding-top: 270px;
     }
 }
 @media (max-width: 850px) and (max-height: 420px){
-    .header-prncl{
+    .headerPrncl{
         padding-top: 150px;
     }
 }

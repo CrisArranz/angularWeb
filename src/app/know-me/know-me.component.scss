@@ -1,20 +1,24 @@
-.body-knowme {
+.knowMeBody {
   height: 770px;
   padding-top: 60px;
 }
 
-h1 {
+.KnowMeTitle {
   text-align: center;
   font-size: 50px;
   margin-bottom: 10px;
 }
 
-.knowme-ul {
+.knowMeInfo {
+  border: 1px solid black;
+}
+
+.knowMeListInfo {
   list-style: none;
   border: 1px solid black;
 }
 
-.knowme-link {
+.knowMeLink {
   text-decoration: none;
   color: black;
   display: block;
@@ -22,25 +26,25 @@ h1 {
   padding: 15px;
 }
 
-.knowme-list {
+.knowMeList {
   width: fit-content;
   float: left;
   margin-top: 100px;
   margin-left: 100px;
 }
 
-.knowme-list-div {
+.knowMeListContainer {
   margin-top: 0px;
 }
 
-.knowme-link:hover,
+.knowMeLink:hover,
 .mainItem {
   color: white;
   background-color: #2980b9;
   cursor: pointer;
 }
 
-.knowme-topics {
+.knowMeTopics {
   width: 60%;
   margin: 0 auto;
   margin-top: 100px;
@@ -50,50 +54,50 @@ h1 {
   h1 {
     font-size: 35px;
   }
-  .body-knowme {
+  .knowMeBody {
     padding-top: 120px;
     height: 770px;
   }
-  .knowme-li {
+  .knowMeInfo {
     display: inline-block;
     text-align: center;
     padding: 0px;
     border: 1px solid black;
   }
-  .knowme-link {
+  .knowMeLink {
     padding: 10px;
   }
-  .knowme-list {
+  .knowMeList {
     width: fit-content;
     margin: 0px auto;
     float: none;
     font-size: 10px;
   }
 
-  .knowme-list-div {
+  .knowMeListContainer {
     margin-top: 10px;
   }
 }
 @media (min-height: 1366px) and (max-height: 1366px) {
-  .body-knowme {
+  .knowMeBody {
     height: 1200px;
   }
-  .knowme-list {
+  .knowMeList {
     margin-left: 60px;
   }
 }
 
 @media (min-height: 1024px) and (max-height: 1024px) {
-  .body-knowme {
+  .knowMeBody {
     height: 825px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1024px) {
-  .body-knowme {
+  .knowMeBody {
     padding-top: 120px;
   }
-  .knowme-list {
+  .knowMeList {
     margin-left: 60px;
   }
 }

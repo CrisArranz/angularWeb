@@ -1,27 +1,27 @@
-<div class="body-knowme" id="knowme">
-  <h1>CONÓCEME</h1>
-  <nav class="knowme-list">
-    <div class="knowme-list-div">
-      <ul class="knowme-ul">
-        <li class="knowme-li" id="estudios" (click)="mark()">
-          <a class="knowme-link" routerLink="./knowledge" [ngClass]="{'mainItem': currentHref === 'knowledge' }">Estudios</a>
+<div class="knowMeBody" id="knowme">
+  <h1 class="KnowMeTitle">CONÓCEME</h1>
+  <nav class="knowMeList">
+    <div class="knowMeListContainer">
+      <ul class="knowMeListInfo">
+        <li class="knowMeInfo" id="estudios" (click)="mark()">
+          <a class="knowMeLink" routerLink="./knowledge" [ngClass]="{'mainItem': currentHref === 'knowledge', 'mainItem': currentHref === undefined}">Estudios</a>
         </li>
-        <li class="knowme-li" id="aficiones" (click)="mark()">
-          <a class="knowme-link" routerLink="./hobbies" [ngClass]="{'mainItem': currentHref === 'hobbies' }">Aficiones</a>
+        <li class="knowMeInfo" id="aficiones" (click)="mark()">
+          <a class="knowMeLink" routerLink="./hobbies" [ngClass]="{'mainItem': currentHref === 'hobbies' }">Aficiones</a>
         </li>
-        <li class="knowme-li" id="gustos" (click)="mark()">
-          <a class="knowme-link" routerLink="./likes" [ngClass]="{'mainItem': currentHref === 'likes' }">Gustos</a>
+        <li class="knowMeInfo" id="gustos" (click)="mark()">
+          <a class="knowMeLink" routerLink="./likes" [ngClass]="{'mainItem': currentHref === 'likes' }">Gustos</a>
         </li>
-        <li class="knowme-li" id="intereses" (click)="mark()">
-          <a class="knowme-link" routerLink="./interests" [ngClass]="{'mainItem': currentHref === 'interests' }">Intereses</a>
+        <li class="knowMeInfo" id="intereses" (click)="mark()">
+          <a class="knowMeLink" routerLink="./interests" [ngClass]="{'mainItem': currentHref === 'interests' }">Intereses</a>
         </li>
-        <li class="knowme-li" id="inquietudes" (click)="mark()">
-          <a class="knowme-link" routerLink="./concerns" [ngClass]="{'mainItem': currentHref === 'concerns' }">Inquietudes</a>
+        <li class="knowMeInfo" id="inquietudes" (click)="mark()">
+          <a class="knowMeLink" routerLink="./concerns" [ngClass]="{'mainItem': currentHref === 'concerns' }">Inquietudes</a>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="knowme-topics">
+  <div class="knowMeTopics">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -12,9 +12,11 @@ export class KnowMeComponent implements OnInit {
   currentHref: string;
   sourceHref = '/knowme/';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
+    this.currentHref = this.router.url.split(this.sourceHref)[1];
   }
 
   mark() {
