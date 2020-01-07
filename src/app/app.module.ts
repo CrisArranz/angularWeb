@@ -14,6 +14,9 @@ import { HobbiesComponent } from './know-me/hobbies/hobbies.component';
 import { LikesComponent } from './know-me/likes/likes.component';
 import { InterestsComponent } from './know-me/interests/interests.component';
 import { ConcernsComponent } from './know-me/concerns/concerns.component';
+import { PhpComponent } from './experience/php/php.component';
+import { JavascriptComponent } from './experience/javascript/javascript.component';
+import { WorkingComponent } from './experience/working/working.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ConcernsComponent } from './know-me/concerns/concerns.component';
     HobbiesComponent,
     LikesComponent,
     InterestsComponent,
-    ConcernsComponent
+    ConcernsComponent,
+    PhpComponent,
+    JavascriptComponent,
+    WorkingComponent
   ],
   imports: [
     BrowserModule,

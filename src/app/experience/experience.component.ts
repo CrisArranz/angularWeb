@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-experience',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  currentHref = 'php';
+  sourceHref = '/experience/';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  mark(){
+    this.currentHref = this.router.url.split(this.sourceHref)[1];
   }
 
 }

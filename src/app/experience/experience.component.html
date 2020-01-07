@@ -3,14 +3,14 @@
   <nav class="experienceList">
     <div class="experienceListContainer">
       <ul class="experienceListInfo">
-        <li class="experienceInfo" id="php">
-          <a class="experienceLink" routerLink="">PHP</a>
+        <li class="experienceInfo" id="php" (click)="mark()">
+          <a class="experienceLink" routerLink="./php" [ngClass]="{'mainItem': currentHref === 'php' }">PHP</a>
         </li>
-        <li class="experienceInfo" id="angular">
-          <a class="experienceLink" routerLink="">JavaScript / Angular</a>
+        <li class="experienceInfo" id="javascript" (click)="mark()">
+          <a class="experienceLink" routerLink="./javascript" [ngClass]="{'mainItem': currentHref === 'javascript' }">JavaScript</a>
         </li>
-        <li class="experienceInfo" id="laboral">
-          <a class="experienceLink" routerLink="">Laboral</a>
+        <li class="experienceInfo" id="laboral" (click)="mark()">
+          <a class="experienceLink" routerLink="./working" [ngClass]="{'mainItem': currentHref === 'working' }">Laboral</a>
         </li>
       </ul>
     </div>
