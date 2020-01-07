@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { KnowMeComponent } from '../know-me/know-me.component';
 import { ConcernsComponent } from '../know-me/concerns/concerns.component';
@@ -9,26 +10,37 @@ import { KnowledgeComponent } from '../know-me/knowledge/knowledge.component';
 import { LikesComponent } from '../know-me/likes/likes.component';
 
 import { ExperienceComponent } from '../experience/experience.component';
+import { PhpComponent } from '../experience/php/php.component';
+import { JavascriptComponent } from '../experience/javascript/javascript.component';
+import { WorkingComponent } from '../experience/working/working.component';
 
 import { ContactComponent } from '../contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'knowme', component: KnowMeComponent, pathMatch: 'prefix', children: [
-    { path: 'concerns', component: ConcernsComponent},
-    { path: 'hobbies', component: HobbiesComponent },
-    { path: 'interests', component: InterestsComponent },
-    { path: 'knowledge', component: KnowledgeComponent },
-    { path: 'likes', component: LikesComponent },
+    { path: 'concerns', component: ConcernsComponent, data: {animation: 'concerns'}},
+    { path: 'hobbies', component: HobbiesComponent, data: {animation: 'hobbies'} },
+    { path: 'interests', component: InterestsComponent, data: {animation: 'interests'} },
+    { path: 'knowledge', component: KnowledgeComponent, data: {animation: 'knowledge'} },
+    { path: 'likes', component: LikesComponent, data: {animation: 'likes'} },
     { path: '', component: KnowledgeComponent }
   ]},
-  { path: 'experience', component: ExperienceComponent },
+  { path: 'experience', component: ExperienceComponent, pathMatch: 'prefix', children: [
+    { path: 'php', component: PhpComponent},
+    { path: 'javascript', component: JavascriptComponent },
+    { path: 'working', component: WorkingComponent },
+    { path: '', component: PhpComponent }
+  ] },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: ContactComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
   providers: [],
-  imports: [ RouterModule.forRoot(appRoutes) ],
+  imports: [
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
+  ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }

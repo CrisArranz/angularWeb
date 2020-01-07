@@ -16,6 +16,7 @@
 .knowMeListInfo {
   list-style: none;
   border: 1px solid black;
+  width: 140px;
 }
 
 .knowMeLink {
@@ -51,7 +52,7 @@
 }
 
 @media (max-width: 950px) {
-  h1 {
+  .KnowMeTitle {
     font-size: 35px;
   }
   .knowMeBody {
@@ -77,6 +78,9 @@
   .knowMeListContainer {
     margin-top: 10px;
   }
+  .knowMeListInfo {
+    width: fit-content;
+  }
 }
 @media (min-height: 1366px) and (max-height: 1366px) {
   .knowMeBody {
@@ -98,6 +102,6 @@
     padding-top: 120px;
   }
   .knowMeList {
-    margin-left: 60px;
+    margin-left: 40px;
   }
 }
