@@ -9,14 +9,13 @@ import { Router } from '@angular/router';
 export class KnowMeComponent implements OnInit {
 
   currentLink = false;
-  currentHref: string;
+  currentHref = 'knowledge';
   sourceHref = '/knowme/';
 
   constructor(private router: Router) {
   }
 
   ngOnInit() {
-    this.currentHref = this.router.url.split(this.sourceHref)[1];
   }
 
   mark() {
