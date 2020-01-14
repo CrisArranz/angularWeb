@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -36,6 +39,8 @@ import { WorkingComponent } from './experience/working/working.component';
     WorkingComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+ 	  AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule
   ],
