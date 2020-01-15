@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from '../animations/router-animation';
-import { FirebaseService } from '../services/firebase.service';
+import { KnowmeService } from '../services/knowme.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-know-me',
@@ -16,22 +17,19 @@ export class KnowMeComponent implements OnInit {
   currentHref = 'knowledge';
   sourceHref = '/knowme/';
 
-  list: any[];
+  knowMeList: any;
 
-  constructor(public firebaseService: FirebaseService, private router: Router) {
+  constructor(public knowMeService: KnowmeService, private router: Router) {
   }
 
   ngOnInit() {
-    this.firebaseService.getKnowMe().subscribe(data => {
-      this.list = data.map(e => {
-        return {
-          ...e.payload.doc.metadata
-        };
-      });
-    });
-
-    console.log(this.list);
+    this.getKnowMeList();
   }
+
+  getKnowMeList = () =>
+    this.knowMeService
+      .getKnowMeList()
+      .subscribe(res => (this.knowMeList = res));
 
   mark() {
     this.currentHref = this.router.url.split(this.sourceHref)[1];

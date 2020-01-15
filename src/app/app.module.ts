@@ -40,7 +40,7 @@ import { WorkingComponent } from './experience/working/working.component';
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
- 	  AngularFirestoreModule,
+    AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule
   ],

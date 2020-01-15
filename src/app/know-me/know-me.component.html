@@ -3,20 +3,8 @@
   <nav class="knowMeList">
     <div class="knowMeListContainer">
       <ul class="knowMeListInfo">
-        <li class="knowMeInfo" id="estudios" (click)="mark()">
-          <a class="knowMeLink" routerLink="./knowledge" [ngClass]="{'mainItem': currentHref === 'knowledge' }">Estudios</a>
-        </li>
-        <li class="knowMeInfo" id="aficiones" (click)="mark()">
-          <a class="knowMeLink" routerLink="./hobbies" [ngClass]="{'mainItem': currentHref === 'hobbies' }">Aficiones</a>
-        </li>
-        <li class="knowMeInfo" id="gustos" (click)="mark()">
-          <a class="knowMeLink" routerLink="./likes" [ngClass]="{'mainItem': currentHref === 'likes' }">Gustos</a>
-        </li>
-        <li class="knowMeInfo" id="intereses" (click)="mark()">
-          <a class="knowMeLink" routerLink="./interests" [ngClass]="{'mainItem': currentHref === 'interests' }">Intereses</a>
-        </li>
-        <li class="knowMeInfo" id="inquietudes" (click)="mark()">
-          <a class="knowMeLink" routerLink="./concerns" [ngClass]="{'mainItem': currentHref === 'concerns' }">Inquietudes</a>
+        <li *ngFor="let topics of knowMeList" class="knowMeInfo" id="{{topics.payload.doc.data().id}}" (click)="mark()">
+          <a class="knowMeLink" routerLink="./{{topics.payload.doc.data().component}}" [ngClass]="{'mainItem': currentHref === topics.payload.doc.data().component}">{{topics.payload.doc.data().title}}</a>
         </li>
       </ul>
     </div>
