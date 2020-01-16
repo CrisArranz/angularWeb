@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KnowmeService } from '../../services/knowme.service';
 
 @Component({
   selector: 'app-concerns',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./concerns.component.scss']
 })
 export class ConcernsComponent implements OnInit {
+  concernsList: any;
 
-  constructor() { }
+  constructor(private knowMeService: KnowmeService) { }
 
   ngOnInit() {
+    this.getConcernsList();
   }
+
+  getConcernsList = () =>
+  this.knowMeService
+    .getKnowMeInfo('concerns')
+    .subscribe(res => (this.concernsList = res));
 
 }

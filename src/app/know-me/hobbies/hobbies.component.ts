@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KnowmeService } from '../../services/knowme.service';
 
 @Component({
   selector: 'app-hobbies',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hobbies.component.scss']
 })
 export class HobbiesComponent implements OnInit {
-
-  constructor() { }
+  hobbiesList: any;
+  constructor(private knowMeService: KnowmeService) { }
 
   ngOnInit() {
+    this.getHobbiesInfo();
   }
+
+  getHobbiesInfo = () =>
+    this.knowMeService.getKnowMeInfo('hobbies')
+    .subscribe(res => (this.hobbiesList = res));
 
 }

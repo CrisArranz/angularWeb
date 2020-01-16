@@ -1,5 +1,4 @@
-<div class="knowMeElements" id="hobbiesElement">
-  <h3>Aficiones</h3>
-  <p>Amante del baloncesto desde pequeño, eso me ha llevado a ser entrenador del mismo.</p>
-  <p>Me encantan los rompecabezas y todos los juegos que conlleven usar el cerebro.</p>
+<div *ngFor="let hobbies of hobbiesList" class="knowMeElements" id="hobbiesElement">
+  <h3>{{hobbies.payload.doc.data().title}}</h3>
+  <p>{{hobbies.payload.doc.data().description}}</p>
 </div>

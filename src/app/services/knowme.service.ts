@@ -14,4 +14,8 @@ export class KnowmeService {
   getKnowMeList() {
     return this.firestore.collection(this.dbPath).snapshotChanges();
   }
+
+  getKnowMeInfo(infoKnowMe: string) {
+    return this.firestore.collection(infoKnowMe).snapshotChanges();
+  }
 }

@@ -1,5 +1,5 @@
-<div class="knowMeElements" id="knowledgeElement">
-  <h3>Estudios</h3>
-  <p class="knowledgeCource">Grado Superior D.A.I. (Desarrollo de Aplicaciones Informáticas) Programación informática, aplicaciones específicas.</p>
-  <p class="knowledgeZone">I.E.S Enrique Tierno Galván. Parla. Madrid</p>
+<div *ngFor="let knowledge of knowledgeList" class="knowMeElements" id="knowledgeElement">
+  <h3>{{knowledge.payload.doc.data().title}}</h3>
+  <p class="knowledgeCource">{{knowledge.payload.doc.data().description}}</p>
+  <p class="knowledgeZone">{{knowledge.payload.doc.data().place}}</p>
 </div>

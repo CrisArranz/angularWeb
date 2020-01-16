@@ -1,4 +1,4 @@
-<div class="knowMeElements" id="likesElement">
-  <h3>Gustos</h3>
-  <p> Me gusta disfrutar de mi trabajo. Soy competitivo pero también me encanta el juego en equipo, compartir y aprender de los que me rodean.</p>
+<div *ngFor = "let likes of likesList" class="knowMeElements" id="likesElement">
+    <h3>{{likes.payload.doc.data().title}}</h3>
+    <p>{{likes.payload.doc.data().description}}</p>
 </div>

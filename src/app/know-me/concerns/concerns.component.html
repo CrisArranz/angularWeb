@@ -1,15 +1,4 @@
-<div class="knowMeElements" id="concernsElement">
-  <h3>Inquietudes</h3>
-  <p>
-    Me considero una persona curiosa, con grandes ganas de aprender y con el conocimiento de que puedo mejorar muchísimo.
-  </p>
-  <p>
-    Amante del trabajo en equipo y todas las metodologías que apoyan este punto.
-  </p>
-  <p>
-    Me encantan los retos y abordarlos de la mejor manera posible tanto individualmente como colectivamente.
-  </p>
-  <p>
-    Disfruto del trabajo cada día para regresar con las mismas ganas al día siguiente.
-  </p>
+<div *ngFor = "let concerns of concernsList" class="knowMeElements" id="concernsElement">
+    <h3>{{concerns.payload.doc.data().title}}</h3>
+    <p>{{concerns.payload.doc.data().description}}</p>
 </div>

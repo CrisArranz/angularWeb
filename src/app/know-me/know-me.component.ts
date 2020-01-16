@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from '../animations/router-animation';
 import { KnowmeService } from '../services/knowme.service';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-know-me',
