@@ -3,14 +3,8 @@
   <nav class="experienceList">
     <div class="experienceListContainer">
       <ul class="experienceListInfo">
-        <li class="experienceInfo" id="php" (click)="mark()">
-          <a class="experienceLink" routerLink="./php" [ngClass]="{'mainItem': currentHref === 'php' }">PHP</a>
-        </li>
-        <li class="experienceInfo" id="javascript" (click)="mark()">
-          <a class="experienceLink" routerLink="./javascript" [ngClass]="{'mainItem': currentHref === 'javascript' }">JavaScript</a>
-        </li>
-        <li class="experienceInfo" id="laboral" (click)="mark()">
-          <a class="experienceLink" routerLink="./working" [ngClass]="{'mainItem': currentHref === 'working' }">Laboral</a>
+        <li *ngFor="let experience of experienceList" class="experienceInfo" id="{{experience.payload.doc.data().id}}" (click)="mark()">
+          <a class="experienceLink" routerLink="./{{experience.payload.doc.data().component}}" [ngClass]="{'mainItem': currentHref === experience.payload.doc.data().id }">{{experience.payload.doc.data().title}}</a>
         </li>
       </ul>
     </div>

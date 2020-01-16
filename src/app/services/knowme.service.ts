@@ -6,7 +6,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class KnowmeService {
 
-  private dbPath = 'topics';
+  private dbPath = 'topics-knowme';
 
   constructor(private firestore: AngularFirestore) {
   }

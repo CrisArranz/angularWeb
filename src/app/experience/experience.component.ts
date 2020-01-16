@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ExperienceService } from '../services/experience.service';
 
 @Component({
   selector: 'app-experience',
@@ -11,13 +12,20 @@ export class ExperienceComponent implements OnInit {
   currentHref = 'php';
   sourceHref = '/experience/';
 
-  constructor(private router: Router) { }
+  experienceList: any;
+
+  constructor(private experienceService: ExperienceService, private router: Router) { }
 
   ngOnInit() {
+    this.getExperienceList();
   }
 
   mark(){
     this.currentHref = this.router.url.split(this.sourceHref)[1];
   }
+
+  getExperienceList = () =>
+    this.experienceService.getExperienceList()
+    .subscribe(res => (this.experienceList = res));
 
 }
