@@ -1,4 +1,4 @@
-<div *ngFor = "let likes of likesList" class="knowMeElements" id="likesElement">
-    <p class="title">{{likes.payload.doc.data().title}}</p>
-    <p class="description">{{likes.payload.doc.data().description}}</p>
+<div *ngFor = "let likes of likesList" class="knowMeElements">
+    <p *ngIf="likes.payload.doc.data().title" class="title">{{likes.payload.doc.data().title}}</p>
+    <p *ngIf="likes.payload.doc.data().description" class="description">{{likes.payload.doc.data().description}}</p>
 </div>

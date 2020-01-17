@@ -1,4 +1,4 @@
-<div *ngFor="let hobbies of hobbiesList" class="knowMeElements" id="hobbiesElement">
-  <p class="title">{{hobbies.payload.doc.data().title}}</p>
-  <p class="description">{{hobbies.payload.doc.data().description}}</p>
+<div *ngFor="let hobbies of hobbiesList" class="knowMeElements">
+  <p *ngIf="hobbies.payload.doc.data().title" class="title">{{hobbies.payload.doc.data().title}}</p>
+  <p *ngIf="hobbies.payload.doc.data().description" class="description">{{hobbies.payload.doc.data().description}}</p>
 </div>

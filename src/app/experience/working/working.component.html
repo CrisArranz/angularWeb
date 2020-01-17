@@ -1,5 +1,5 @@
-<div *ngFor = "let working of workingList" class="experienceElements" id="laboralElement">
-  <p class="title">{{working.payload.doc.data().title}}</p>
-  <p class="descripcion">DESCRIPCION</p>
-  <p>{{working.payload.doc.data().description}}</p>
+<div *ngFor = "let working of workingList" class="experienceElements">
+  <p *ngIf="working.payload.doc.data().title" class="title">{{working.payload.doc.data().title}}</p>
+  <p *ngIf="working.payload.doc.data().descriptiontitle" class="descripcion">{{working.payload.doc.data().descriptiontitle}}</p>
+  <p *ngIf="working.payload.doc.data().description">{{working.payload.doc.data().description}}</p>
 </div> 

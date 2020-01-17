@@ -1,5 +1,5 @@
-<div *ngFor="let knowledge of knowledgeList" class="knowMeElements" id="knowledgeElement">
-  <p class="title">{{knowledge.payload.doc.data().title}}</p>
-  <p class="knowledgeCource">{{knowledge.payload.doc.data().description}}</p>
-  <p class="knowledgeZone">{{knowledge.payload.doc.data().place}}</p>
+<div *ngFor="let knowledge of knowledgeList" class="knowMeElements">
+  <p *ngIf="knowledge.payload.doc.data().title" class="title">{{knowledge.payload.doc.data().title}}</p>
+  <p *ngIf="knowledge.payload.doc.data().description" class="knowledgeCource">{{knowledge.payload.doc.data().description}}</p>
+  <p *ngIf="knowledge.payload.doc.data().place" class="knowledgeZone">{{knowledge.payload.doc.data().place}}</p>
 </div>

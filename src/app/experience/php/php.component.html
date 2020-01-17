@@ -1,7 +1,7 @@
-<div *ngFor = "let php of phpList" class="experienceElements" id="phpElement">
-  <p class="title">{{php.payload.doc.data().title}}</p>
-  <p class="descripcion">DESCRIPCION</p>
-  <p>{{php.payload.doc.data().description}}</p>
-  <p class="framework">FRAMEWORK</p>
-  <p>{{php.payload.doc.data().frameworks}}</p>
+<div *ngFor="let php of phpList" class="experienceElements">
+  <p *ngIf="php.payload.doc.data().title" class="title">{{php.payload.doc.data().title}}</p>
+  <p *ngIf="php.payload.doc.data().descriptiontitle" class="descripcion">{{php.payload.doc.data().descriptiontitle}}</p>
+  <p *ngIf="php.payload.doc.data().description">{{php.payload.doc.data().description}}</p>
+  <p *ngIf="php.payload.doc.data().frameworkstitle" class="framework">{{php.payload.doc.data().frameworkstitle}}</p>
+  <p *ngIf="php.payload.doc.data().frameworks">{{php.payload.doc.data().frameworks}}</p>
 </div> 

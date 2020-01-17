@@ -1,7 +1,7 @@
-<div *ngFor = "let javascript of javascriptList" class="experienceElements" id="javascriptElement">
-  <p class="title">{{javascript.payload.doc.data().title}}</p>
-  <p class="descripcion">DESCRIPCION</p>
-  <p>{{javascript.payload.doc.data().description}}</p>
-  <p class="framework">FRAMEWORK</p>
-  <p>{{javascript.payload.doc.data().frameworks}}</p>
+<div *ngFor = "let javascript of javascriptList" class="experienceElements">
+  <p *ngIf = "javascript.payload.doc.data().title" class="title">{{javascript.payload.doc.data().title}}</p>
+  <p *ngIf = "javascript.payload.doc.data().descriptiontitle" class="descripcion">{{javascript.payload.doc.data().descriptiontitle}}</p>
+  <p *ngIf = "javascript.payload.doc.data().description">{{javascript.payload.doc.data().description}}</p>
+  <p *ngIf = "javascript.payload.doc.data().frameworkstitle" class="framework">{{javascript.payload.doc.data().frameworkstitle}}</p>
+  <p *ngIf = "javascript.payload.doc.data().frameworks">{{javascript.payload.doc.data().frameworks}}</p>
 </div>
