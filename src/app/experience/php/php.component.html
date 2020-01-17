@@ -1,3 +1,7 @@
-<div class="experienceElements" id="phpElement">
-    <h3>PHP</h3>
-  </div>
+<div *ngFor = "let php of phpList" class="experienceElements" id="phpElement">
+  <p class="title">{{php.payload.doc.data().title}}</p>
+  <p class="descripcion">DESCRIPCION</p>
+  <p>{{php.payload.doc.data().description}}</p>
+  <p class="framework">FRAMEWORK</p>
+  <p>{{php.payload.doc.data().frameworks}}</p>
+</div> 

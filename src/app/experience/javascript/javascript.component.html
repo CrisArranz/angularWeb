@@ -1,3 +1,7 @@
-<div class="experienceElements" id="javascriptElement">
-  <h3>JavaScript</h3>
+<div *ngFor = "let javascript of javascriptList" class="experienceElements" id="javascriptElement">
+  <p class="title">{{javascript.payload.doc.data().title}}</p>
+  <p class="descripcion">DESCRIPCION</p>
+  <p>{{javascript.payload.doc.data().description}}</p>
+  <p class="framework">FRAMEWORK</p>
+  <p>{{javascript.payload.doc.data().frameworks}}</p>
 </div>

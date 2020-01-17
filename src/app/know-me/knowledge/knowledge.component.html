@@ -1,5 +1,5 @@
 <div *ngFor="let knowledge of knowledgeList" class="knowMeElements" id="knowledgeElement">
-  <h3>{{knowledge.payload.doc.data().title}}</h3>
+  <p class="title">{{knowledge.payload.doc.data().title}}</p>
   <p class="knowledgeCource">{{knowledge.payload.doc.data().description}}</p>
   <p class="knowledgeZone">{{knowledge.payload.doc.data().place}}</p>
 </div>
