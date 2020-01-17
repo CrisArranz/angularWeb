@@ -11,16 +11,19 @@
 
 .knowMeInfo {
   border: 1px solid black;
+  border-radius: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .knowMeListInfo {
   list-style: none;
-  border: 1px solid black;
   width: 140px;
 }
 
 .knowMeLink {
   text-decoration: none;
+  border-radius: 40px;
   color: black;
   display: block;
   text-align: center;
@@ -56,6 +59,9 @@
   .KnowMeTitle {
     font-size: 35px;
   }
+  .knowMeTopics {
+    margin-top: 35px;
+  }
   .knowMeBody {
     padding-top: 120px;
     height: 770px;
@@ -65,6 +71,8 @@
     text-align: center;
     padding: 0px;
     border: 1px solid black;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
   }
   .knowMeLink {
     padding: 10px;
