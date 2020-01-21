@@ -1,5 +1,5 @@
 <div *ngFor = "let working of workingList" class="experienceElements">
   <p *ngIf="working.payload.doc.data().title" class="title">{{working.payload.doc.data().title}}</p>
-  <p *ngIf="working.payload.doc.data().descriptiontitle" class="descripcion">{{working.payload.doc.data().descriptiontitle}}</p>
-  <p *ngIf="working.payload.doc.data().description">{{working.payload.doc.data().description}}</p>
+  <p *ngIf="working.payload.doc.data().enterprisetitle" class="descripcion">{{working.payload.doc.data().enterprisetitle}}</p>
+  <p *ngIf="working.payload.doc.data().workingtime">{{working.payload.doc.data().workingtime}}</p>
 </div> 
