@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { ExperienceService } from '../services/experience.service';
+import { slideInAnimation } from '../animations/router-animation';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
+  animations: [
+    slideInAnimation
+  ]
 })
 export class ExperienceComponent implements OnInit {
 
@@ -27,5 +31,9 @@ export class ExperienceComponent implements OnInit {
   getExperienceList = () =>
     this.experienceService.getExperienceList()
     .subscribe(res => (this.experienceList = res));
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 
 }

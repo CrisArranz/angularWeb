@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
@@ -20,6 +21,7 @@ import { ConcernsComponent } from './know-me/concerns/concerns.component';
 import { PhpComponent } from './experience/php/php.component';
 import { JavascriptComponent } from './experience/javascript/javascript.component';
 import { WorkingComponent } from './experience/working/working.component';
+import { InfoComponent } from './contact/info/info.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,14 @@ import { WorkingComponent } from './experience/working/working.component';
     ConcernsComponent,
     PhpComponent,
     JavascriptComponent,
-    WorkingComponent
+    WorkingComponent,
+    InfoComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [],

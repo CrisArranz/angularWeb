@@ -15,6 +15,7 @@ import { JavascriptComponent } from '../experience/javascript/javascript.compone
 import { WorkingComponent } from '../experience/working/working.component';
 
 import { ContactComponent } from '../contact/contact.component';
+import { InfoComponent } from '../contact/info/info.component';
 
 const appRoutes: Routes = [
   { path: 'knowme', component: KnowMeComponent, pathMatch: 'prefix', children: [
@@ -26,19 +27,20 @@ const appRoutes: Routes = [
     { path: '', component: KnowledgeComponent }
   ]},
   { path: 'experience', component: ExperienceComponent, pathMatch: 'prefix', children: [
-    { path: 'php', component: PhpComponent},
-    { path: 'javascript', component: JavascriptComponent },
-    { path: 'working', component: WorkingComponent },
-    { path: '', component: PhpComponent }
+    { path: 'php', component: PhpComponent, data: {animation: 'php'}},
+    { path: 'javascript', component: JavascriptComponent, data: {animation: 'javascript'} },
+    { path: 'working', component: WorkingComponent, data: {animation: 'working'} },
+    { path: '', component: PhpComponent, data: {animation: 'php'} }
   ] },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent, pathMatch: 'prefix', children: [
+    { path: '', component: InfoComponent, data: {animation: 'info'}}
+  ] },
   { path: '**', component: ContactComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
   providers: [],
   imports: [
-    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   exports: [ RouterModule ]

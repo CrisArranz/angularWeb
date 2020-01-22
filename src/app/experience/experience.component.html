@@ -9,7 +9,7 @@
       </ul>
     </div>
   </nav>
-  <div class="experienceTopics">
-    <router-outlet></router-outlet>
+  <div [@routeAnimations]="prepareRoute(outlet)" class="experienceTopics">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
 </div>
