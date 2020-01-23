@@ -13,18 +13,18 @@ export const stepperAnimation =
 
 export const sliderAnimation =
   trigger ('routeAnimations', [
-    transition('knowme <=> *' , slideTo('right')),
-    transition('contact <=> *' , slideTo('left')),
-    transition('* <=> knowme' , slideTo('left')),
-    transition('* <=> contact' , slideTo('right')),
+    transition('knowme => *' , slideTo('right')),
+    transition('contact => *' , slideTo('left')),
+    transition('* => knowme' , slideTo('left')),
+    transition('* => contact' , slideTo('right')),
 ]);
 
 export const transformerAnimation =
   trigger ('routeAnimations', [
-    transition('knowme <=> *' , transformTo({ x: 100, y: -100, rotate: 90 })),
-    transition('contact <=> *' , transformTo({ x: 100, y: -100, rotate: 90 })),
-    transition('* <=> knowme' , transformTo({ x: -100, y: 100, rotate: 90 })),
-    transition('* <=> contact' , transformTo({ x: -100, y: 100, rotate: 90 })),
+    transition('knowme => *' , transformTo({ x: 100, y: -100, rotate: 720 })),
+    transition('contact => *' , transformTo({ x: 100, y: -100, rotate: 720 })),
+    transition('* => knowme' , transformTo({ x: -100, y: 100, rotate: 720 })),
+    transition('* => contact' , transformTo({ x: -100, y: 100, rotate: 720 })),
 ]);
 
 function fadderTo() {
@@ -91,10 +91,10 @@ function transformTo({x = 100, y = 0, rotate = 0}) {
     ]),
     group([
       query(':leave', [
-        animate('1600ms ease-out', style({ transform: `translate(${x}%, ${y}%) rotate(${rotate}deg)`}))
+        animate('600ms ease-out', style({ transform: `translate(${x}%, ${y}%) rotate(${rotate}deg)`}))
       ], optional),
       query(':enter', [
-        animate('1600ms ease-out', style({ transform: `translate(0, 0) rotate(0)`}))
+        animate('600ms ease-out', style({ transform: `translate(0, 0) rotate(0)`}))
       ], optional)
     ]),
     query(':leave', animateChild(), optional),

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 import { NgAnimateScrollService } from 'ng-animate-scroll';
 
 @Component({
