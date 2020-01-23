@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { ExperienceService } from '../services/experience.service';
-import { slideInAnimation } from '../animations/router-animation';
+import { fadderAnimation } from '../animations/router-animation';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
   animations: [
-    slideInAnimation
+    fadderAnimation
   ]
 })
 export class ExperienceComponent implements OnInit {

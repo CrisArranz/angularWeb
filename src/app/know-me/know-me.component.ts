@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { slideInAnimation } from '../animations/router-animation';
+import { fadderAnimation } from '../animations/router-animation';
 import { KnowmeService } from '../services/knowme.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { KnowmeService } from '../services/knowme.service';
   templateUrl: './know-me.component.html',
   styleUrls: ['./know-me.component.scss'],
   animations: [
-    slideInAnimation
+    fadderAnimation
   ]
 })
 export class KnowMeComponent implements OnInit {
