@@ -18,7 +18,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { InfoComponent } from '../contact/info/info.component';
 
 const appRoutes: Routes = [
-  { path: 'knowme', component: KnowMeComponent, pathMatch: 'prefix', children: [
+  { path: 'knowme', component: KnowMeComponent, data: {animation: 'concerns'}, pathMatch: 'prefix', children: [
     { path: 'concerns', component: ConcernsComponent, data: {animation: 'concerns'}},
     { path: 'hobbies', component: HobbiesComponent, data: {animation: 'hobbies'} },
     { path: 'interests', component: InterestsComponent, data: {animation: 'interests'} },
@@ -26,13 +26,13 @@ const appRoutes: Routes = [
     { path: 'likes', component: LikesComponent, data: {animation: 'likes'} },
     { path: '', component: KnowledgeComponent }
   ]},
-  { path: 'experience', component: ExperienceComponent, pathMatch: 'prefix', children: [
+  { path: 'experience', component: ExperienceComponent, data: {animation: 'concerns'}, pathMatch: 'prefix', children: [
     { path: 'php', component: PhpComponent, data: {animation: 'php'}},
     { path: 'javascript', component: JavascriptComponent, data: {animation: 'javascript'} },
     { path: 'working', component: WorkingComponent, data: {animation: 'working'} },
     { path: '', component: PhpComponent, data: {animation: 'php'} }
   ] },
-  { path: 'contact', component: ContactComponent, pathMatch: 'prefix', children: [
+  { path: 'contact', component: ContactComponent, data: {animation: 'concerns'}, pathMatch: 'prefix', children: [
     { path: '', component: InfoComponent, data: {animation: 'info'}}
   ] },
   { path: '**', component: ContactComponent, pathMatch: 'full' }

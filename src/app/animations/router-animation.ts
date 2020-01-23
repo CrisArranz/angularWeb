@@ -2,22 +2,7 @@ import {trigger, transition, style, query, animate, animateChild, group } from '
 
 export const fadderAnimation =
   trigger ('routeAnimations', [
-    transition('* <=> *' , [
-      query(':enter, :leave', [
-        style({
-          position: 'absolute',
-          left: 0,
-          width: '100%',
-          opacity: 0,
-          transform: 'scale(0) translateY(100%)'
-        })
-      ], { optional: true }),
-      query(':enter', [
-        animate('600ms ease',
-          style({ opacity: 1, transform: 'scale(1) translateY(0)' }))
-      ], { optional: true })
-    ])
-]);
+    transition('* <=> *' , fadderTo())]);
 
 export const slideToAnimation =
   trigger ('routeAnimations', [
@@ -34,6 +19,27 @@ export const transformerAnimation =
     transition('* <=> knowme' , transformTo({ x: -100, y: 100, rotate: 720 })),
     transition('* <=> contact' , transformTo({ x: -100, y: 100, rotate: 720 })),
 ]);
+
+function fadderTo() {
+  const optional = {optional: true};
+  return [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        left: 0,
+        width: '100%',
+        opacity: 0,
+        transform: 'scale(0) translateY(100%)'
+      })
+    ], optional),
+    query(':enter', [
+      animate('600ms ease',
+          style({ opacity: 1, transform: 'scale(1) translateY(0)' }))
+      ], optional),
+    query(':leave', animateChild(), optional),
+    query(':enter', animateChild(), optional)
+  ];
+}
 
 function slideTo(direction: any) {
   const optional = {optional: true};
