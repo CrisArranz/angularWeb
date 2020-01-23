@@ -1,10 +1,17 @@
-import {trigger, transition, style, query, animate, animateChild, group } from '@angular/animations';
+import {trigger, transition, style, query, animate, animateChild, group, keyframes } from '@angular/animations';
 
 export const fadderAnimation =
   trigger ('routeAnimations', [
-    transition('* <=> *' , fadderTo())]);
+    transition('* <=> *' , fadderTo())
+]);
 
-export const slideToAnimation =
+export const stepperAnimation =
+  trigger('routeAnimations', [
+    transition('* <=> *', stepperTo())
+
+]);
+
+export const sliderAnimation =
   trigger ('routeAnimations', [
     transition('knowme <=> *' , slideTo('right')),
     transition('contact <=> *' , slideTo('left')),
@@ -14,10 +21,10 @@ export const slideToAnimation =
 
 export const transformerAnimation =
   trigger ('routeAnimations', [
-    transition('knowme <=> *' , transformTo({ x: 100, y: -100, rotate: 720 })),
-    transition('contact <=> *' , transformTo({ x: 100, y: -100, rotate: 720 })),
-    transition('* <=> knowme' , transformTo({ x: -100, y: 100, rotate: 720 })),
-    transition('* <=> contact' , transformTo({ x: -100, y: 100, rotate: 720 })),
+    transition('knowme <=> *' , transformTo({ x: 100, y: -100, rotate: 90 })),
+    transition('contact <=> *' , transformTo({ x: 100, y: -100, rotate: 90 })),
+    transition('* <=> knowme' , transformTo({ x: -100, y: 100, rotate: 90 })),
+    transition('* <=> contact' , transformTo({ x: -100, y: 100, rotate: 90 })),
 ]);
 
 function fadderTo() {
@@ -92,5 +99,34 @@ function transformTo({x = 100, y = 0, rotate = 0}) {
     ]),
     query(':leave', animateChild(), optional),
     query(':enter', animateChild(), optional),
+  ];
+}
+
+function stepperTo(){
+  const optional = {optional: true};
+  return [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        left: 0,
+        width: '100%',
+      }),
+    ], optional),
+    group([
+      query(':enter', [
+        animate('2000ms ease', keyframes([
+          style({ transform: 'scale(0) translateX(100%)', offset: 0 }),
+          style({ transform: 'scale(0.5) translateX(25%)', offset: 0.3 }),
+          style({ transform: 'scale(1) translateX(0%)', offset: 1 }),
+        ])),
+      ], optional),
+      query(':leave', [
+        animate('2000ms ease', keyframes([
+          style({ transform: 'scale(1)', offset: 0 }),
+          style({ transform: 'scale(0.5) translateX(-25%) rotate(0)', offset: 0.35 }),
+          style({ opacity: 0, transform: 'translateX(-50%) rotate(-180deg) scale(6)', offset: 1 }),
+        ])),
+      ], optional)
+    ])
   ];
 }
