@@ -19,6 +19,24 @@ export const sliderAnimation =
     transition('* => contact' , slideTo('right')),
 ]);
 
+export const sliderChildAnimation =
+  trigger ('routeAnimations', [
+    transition('likes => *' , slideTo('right')),
+    transition('* => likes' , slideTo('left')),
+    transition('knowledge => interests' , slideTo('right')),
+    transition('knowledge => concerns' , slideTo('right')),
+    transition('interests => knowledge' , slideTo('left')),
+    transition('interests => concerns' , slideTo('right')),
+    transition('concerns => knowledge' , slideTo('left')),
+    transition('concerns => interests' , slideTo('left')),
+    transition('hobbies => *' , slideTo('left')),
+    transition('* => hobbies' , slideTo('right')),
+    transition('php => *' , slideTo('right')),
+    transition('* => php' , slideTo('left')),
+    transition('working => *' , slideTo('left')),
+    transition('* => working' , slideTo('right')),
+]);
+
 export const transformerAnimation =
   trigger ('routeAnimations', [
     transition('knowme => *' , transformTo({ x: 100, y: -100, rotate: 720 })),
