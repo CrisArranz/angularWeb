@@ -35,7 +35,9 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent, data: {animation: 'contact'}, pathMatch: 'prefix', children: [
     { path: '', component: InfoComponent, data: {animation: 'info'}}
   ] },
-  { path: '**', component: ContactComponent, pathMatch: 'full' }
+  { path: '**', component: ContactComponent, pathMatch: 'full', children: [
+    { path: '', component: InfoComponent, data: {animation: 'info'}}
+  ]}
 ];
 
 @NgModule({
